@@ -5,7 +5,7 @@ function bordaDiv() {
     divImg.style.border='2px solid black'
 }
 
-divImg.addEventListener()
+divImg.addEventListener('click', bordaDiv)
 
 txt.onclick = () => {
     alert('Campo de texto clicado')
@@ -14,3 +14,17 @@ txt.onclick = () => {
 const clicked = () => {
     console.log('Botão Clicado!')
 }
+
+
+txt.addEventListener('keypress', () => {
+    alert('Tecla Pressionada!')
+})
+
+divImg.addEventListener('mouseover', () => {
+    divImg.style.opacity = '0.5';
+})
+
+divImg.addEventListener('mouseout', () => {
+    divImg.style.opacity = '1';
+})
+
