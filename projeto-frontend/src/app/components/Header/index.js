@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import styles from './Header.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,10 +18,10 @@ const Header = () => {
       </div>
       <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#services">Serviços</a></li>
-          <li><a href="#contact">Contato</a></li>
+          <li><Link href='/'>Home</Link></li>
+          <li><Link href='/sobre'>Sobre</Link></li>
+          <li><Link href='/servicos'>Serviços</Link></li>
+          <li><Link href='/contato'>Contato</Link></li>
         </ul>
       </nav>
       <div className={styles.menuIcon} onClick={toggleMenu}>
